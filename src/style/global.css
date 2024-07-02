@@ -26,13 +26,16 @@
 html,
 body {
 	margin: auto;
-	padding: 20px;
-	max-width: 70ch;
 	background-color: var(--white);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--black);
 }
+
+body {
+	padding: 20px;
+}
+
 html,
 body,
 button,
@@ -228,10 +231,6 @@ h3 {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-}
-
-.header-frame {
-	max-width: 350px;
 }
 
 article :not(.article-title) {
