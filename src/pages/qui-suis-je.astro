@@ -3,12 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import { Content as Home } from "./home.md";
-import getTags from "../scripts/getTags";
 
-const posts = await Astro.glob("../posts/*.md");
-
-const tags = getTags(posts);
 ---
 
 <!doctype html>
@@ -17,7 +12,7 @@ const tags = getTags(posts);
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<Home />
+			quisuisje
 
 			<br />
 
