@@ -6,30 +6,65 @@ import Button from "./Button.astro";
 
 <header>
 	<div class="header-section">
-			<img id="toplogo" src="/LogoCarre.jpg">
+			<a id="toplogo" href="/"><img src="/LogoBLANC.png"></a>
 			<nav>
 				<HeaderLink href="/">Accueil</HeaderLink>
 				<HeaderLink href="/qui-suis-je">Qui suis-je ?</HeaderLink>
 				<HeaderLink href="/solutions">Solutions</HeaderLink>
 				<HeaderLink href="/blog">Actualités</HeaderLink>
+				
 			</nav>
-			<Button text="coucou"/>
+			<span id="contact"><HeaderLink href="/blog"></HeaderLink><Button text="CONTACT"/></HeaderLink></span>
+			<div class="separator"></div>
 	</div>
 	
 </header>
 
 
 <style>
+
+	header .separator {
+		background: linear-gradient(to right, #00cbff 0%, #f604ff  100%);
+		height: 6px;
+		width: 100%;
+	}
+
+	header {
+		background-color: var(--black);
+		width: 100%;
+		max-height: 2%;
+		position: relative;
+	}
+
 	#toplogo {
-		max-height: 100px;
+		max-width: 20%;
 		display: inline-block;
+		float: left;
 	}
 
 	nav { 
 		display: inline-block;
+		margin: 0% 10%;
+		position: sticky;
+		top: 0;
+		text-align: center;
 	}
 
-	h2 {
-		margin: 0.5em 0;
+	nav a {
+		margin: 25px 0;
 	}
+	nav a:not(:last-child) {
+		padding: 0 24px 0 0;
+	}
+
+	
+
+	.header-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+	
 </style>
