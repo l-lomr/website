@@ -2,6 +2,8 @@
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import Button from "./Button.astro";
+
+
 ---
 
 <header>
@@ -15,13 +17,78 @@ import Button from "./Button.astro";
 				
 			</nav>
 			<div id="contact" class="navcolumn"><HeaderLink href="/blog"></HeaderLink><Button text="CONTACT"/></HeaderLink></div>
-			<div class="separator"></div>
+
 	</div>
-	
+	<div id="active">
+		<div id="hide-left" class="hide"></div>
+		<div id="triangle"></div>
+		<div id="hide-right" class="hide"></div>
+	</div>
+	<div class="separator"></div>
 </header>
 
+<script>
+
+function calcTrianglePos() {
+	
+	const triangle = document.getElementById('triangle');
+	const leftHide = document.getElementById('hide-left');
+	const rightHide = document.getElementById('hide-right');
+	const active = document.querySelector("nav .active");
+	
+	let newX = 0;
+	if(triangle && active && leftHide && rightHide)
+	{
+		newX = active.getBoundingClientRect().left 
+			+ window.scrollX 
+			+ (active.clientWidth-parseInt(window.getComputedStyle(active).paddingRight))/2 
+			- triangle.getBoundingClientRect().width/2;
+
+		triangle.style.left = newX+'px';
+		triangle.style.visibility  = "visible";
+
+		leftHide.style.width = newX+'px';
+		rightHide.style.left = (newX+triangle.getBoundingClientRect().width)+"px";
+		rightHide.style.width = (window.screen.width-newX-triangle.getBoundingClientRect().width)+'px';
+	}
+		
+}
+
+window.addEventListener('load', (event) => {
+	calcTrianglePos();
+});
+
+window.addEventListener("resize", (event) => {
+	calcTrianglePos();
+});
+
+</script>
 
 <style>
+
+	#active {
+		height: 22px;
+		width: 100%;		
+		display: grid;
+        grid-template-columns: 1fr auto 1fr;
+		background: var(--lomr-gradient);
+	}
+
+	.hide {
+		position: absolute;
+		background-color: black;
+		width: 200%;
+		height: 23px;
+	}
+
+	#triangle{
+		position: absolute;
+		border-right : 24px solid black;
+		border-bottom : 24px solid transparent;
+		border-left : 24px solid black;
+		visibility: hidden;
+	}
+
 	header {
 		background-color: var(--black);
 		width: 100%;
@@ -65,17 +132,10 @@ import Button from "./Button.astro";
 
 	header .separator {
 		background: var(--lomr-gradient);
-		height: 6px;
+		height: 10px;
 		width: 100%;
 	}
 
-	
-
-	
-
-	
-
-	
 
 	@media (max-width: 768px) {
 		
