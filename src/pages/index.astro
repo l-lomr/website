@@ -16,13 +16,47 @@ const tags = getTags(posts);
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
 		<Header title={SITE_TITLE} />
-		<main>
-			<Home />
-
-			<br />
-
-
+		<main>			
+			<div>a</div>
+			<div>b</div>
+			<div>c</div>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	html, body {
+		height: 100%;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	main {
+		flex: 1;
+		display: flex;
+		background-image: url(LOMR_CG.png);
+		background-color: rgba(0,0,0,0.6);
+		background-blend-mode: darken;
+
+		padding: 25px;
+	}
+
+	main div {
+		flex-grow:1;
+		background-color: var(--dark-gray);
+		margin: 25px;
+		padding: 25px;
+		border-radius : 50px;
+	}
+
+	footer {
+		flex-shrink: 0;
+	}
+</style>

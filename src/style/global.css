@@ -18,6 +18,7 @@
 	--blue: #10a2f5;
 	--yellow: #e9bc3f;
 
+	--dark-gray: #262B32;
 	--lomr-gradient: linear-gradient(to right, #00cbff 0%, #f604ff  100%);
 }
 
@@ -28,14 +29,8 @@
 html,
 body {
 	margin: auto;
-	background-color: var(--white);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: var(--black);
-}
-
-main {
-	padding: 20px;
 }
 
 html,
@@ -115,8 +110,6 @@ h6 {
 
 a {
 	color: var(--black);
-	text-decoration-thickness: 0.3ex;
-	text-underline-offset: 0.3ex;
 }
 
 hr {
