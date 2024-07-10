@@ -3,12 +3,39 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} cassidoo. <a href="https://github.com/cassidoo/blahg">This blog is open source</a>! <3
+	<div id="botlogo"><a href="/"><img src="/LogoBLANC.png"></a></div>
+	<div id="botlinks">
+		<a href="/mentions-legales">Mentions légales</a>
+		<a href="/cgv">CGV</a>
+		<a href="/politique-de-confidentialite">Politique de confidentialité</a>
+	</div>
 </footer>
 <style>
+
+	#botlogo {
+		margin-right: auto;
+	}
+
+	#botlogo img{
+		max-height: 40px;
+	}
+
+	#botlinks {
+		display: flex;
+    	gap: 15px;
+	}
+
+	#botlinks a {
+		text-decoration: none;
+	}
+	
 	footer {
-		padding: 25px;
-		text-align: center;
-		font-size: 0.8rem;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 80px;
+		background-color: var(--dark-gray);
+		padding: 0px 25px;
 	}
 </style>
