@@ -16,47 +16,83 @@ const tags = getTags(posts);
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
 		<Header title={SITE_TITLE} />
-		<main>			
-			<div>a</div>
-			<div>b</div>
-			<div>c</div>
+		<main>
+			<div id="soustitre">
+				LOMR, le partenaire cybersécurité des TPE/PME
+			</div>
+			<div id="etapes-container">	
+				<div class="etape">
+					<h3>Étape 1</h3>
+					<p>
+						Lorem ipsum dolor sit amet. Ut error Quis ut molestiae officia id doloremque deleniti et consectetur enim in labore perspiciatis et praesentium totam. In fugit vitae qui soluta libero qui corporis dolorem. Et dignissimos itaque eos voluptatem minus qui dolor perspiciatis est sapiente ratione ut dolores facilis eum nesciunt dolorem. Aut magni cupiditate ea dolorem dicta nam pariatur fugit sit ducimus consequatur et voluptatem asperiores qui nemo fugiat ut quia dolore.
+Et omnis ullam qui expedita quidem qui nihil unde et nesciunt impedit. Rem molestiae internos sed harum doloremque 33 facilis error non consequatur corporis.
+Et laudantium quas et.
+					</p>
+				</div>
+				<div class="etape">
+					<h3>Étape 2</h3>
+					<p>
+						Lorem ipsum dolor sit amet. Ut error Quis ut molestiae officia id doloremque deleniti et consectetur enim in labore perspiciatis et praesentium totam. In fugit vitae qui soluta libero qui corporis dolorem. Et dignissimos itaque eos voluptatem minus qui dolor perspiciatis est sapiente ratione ut dolores facilis eum nesciunt dolorem. Aut magni cupiditate ea dolorem dicta nam pariatur fugit sit ducimus consequatur et voluptatem asperiores qui nemo fugiat ut quia dolore.
+Et omnis ullam qui expedita quidem qui nihil unde et nesciunt impedit. Rem molestiae internos sed harum doloremque 33 facilis error non consequatur corporis.
+Et laudantium quas et.
+					</p>
+				</div>
+				<div class="etape">
+					<h3>Étape 3</h3>
+					<p>
+						Lorem ipsum dolor sit amet. Ut error Quis ut molestiae officia id doloremque deleniti et consectetur enim in labore perspiciatis et praesentium totam. In fugit vitae qui soluta libero qui corporis dolorem. Et dignissimos itaque eos voluptatem minus qui dolor perspiciatis est sapiente ratione ut dolores facilis eum nesciunt dolorem. Aut magni cupiditate ea dolorem dicta nam pariatur fugit sit ducimus consequatur et voluptatem asperiores qui nemo fugiat ut quia dolore.
+Et omnis ullam qui expedita quidem qui nihil unde et nesciunt impedit. Rem molestiae internos sed harum doloremque 33 facilis error non consequatur corporis.
+Et laudantium quas et.
+					</p>
+				</div>
+			</div>	
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <style>
-	html, body {
-		height: 100%;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
+	
+	#soustitre {
+		width: 100%;
+		background: var(--lomr-gradient);
+		border-radius: 50px;
+		padding: 1.5rem;
+		margin: 0rem 2rem;
+		font-size: 4.5rem;
+		font-weight: bold;
+		text-align: center;
 	}
 
-	body {
+	#etapes-container {
 		display: flex;
-		flex-direction: column;
+		flex-grow: 1;
+		flex-wrap: nowrap;
+		width: 100%;
+		align-self: stretch;
+		align-items: stretch;
+		margin-top: 0.5rem;
 	}
 
-	main {
-		flex: 1;
-		display: flex;
-		background-image: url(LOMR_CG.png);
-		background-color: rgba(0,0,0,0.6);
-		background-blend-mode: darken;
-
-		padding: 25px;
-	}
-
-	main div {
-		flex-grow:1;
+	.etape {
+		flex-grow: 1;
 		background-color: var(--dark-gray);
-		margin: 25px;
-		padding: 25px;
+		margin: 2rem;
+		padding: 3rem;
 		border-radius : 50px;
+		width: 33%;
 	}
 
-	footer {
-		flex-shrink: 0;
+	.etape h3 {
+		font-size: 1.6rem;		
+		font-weight: bold;
+		margin: 0;
 	}
+
+	.etape p {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	
 </style>
