@@ -19,10 +19,11 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 <html lang="fr-fr">
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
-		<Header />
+		<Header title={SITE_TITLE} />
 		<main>
+			<p>Contenu à venir prochainement</p>
 			<content>
-				<ul class="posts-list">
+				<!--<ul class="posts-list">
 					{
 						posts.map(
 							({
@@ -31,17 +32,18 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 							}) => <Post {description} {date} {slug} {title} {tags} />
 						)
 					}
-				</ul>
+				</ul> -->
 			</content>
 
-			<p class="center">
-				You can also <a href="https://blahg.netlify.app/rss.xml">
-					subscribe with RSS!
-				</a>
-			</p>
-
-			<Footer />
 		</main>
-		<ColorScript />
+		<Footer />
 	</body>
 </html>
+
+<style>
+	p {
+		font-size: 3rem;
+		width: 100%;
+		text-align: center;
+	}
+</style>
