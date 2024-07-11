@@ -12,12 +12,43 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			quisuisje
+			
+			<div id="photo">
 
-			<br />
+			</div>
 
-
+			<div id="text">
+				<h3>
+					Qui suis-je ?
+				</h3>
+				<p>
+					Lorem ipsum dolor sit amet. Ut error Quis ut molestiae officia id doloremque deleniti et consectetur enim in labore perspiciatis et praesentium totam. In fugit vitae qui soluta libero qui corporis dolorem. Et dignissimos itaque eos voluptatem minus qui dolor perspiciatis est sapiente ratione ut dolores facilis eum nesciunt dolorem. Aut magni cupiditate ea dolorem dicta nam pariatur fugit sit ducimus consequatur et voluptatem asperiores qui nemo fugiat ut quia dolore.
+Et omnis ullam qui expedita quidem qui nihil unde et nesciunt impedit. Rem molestiae internos sed harum doloremque 33 facilis error non consequatur corporis.
+Et laudantium quas et.
+				</p>
+			</div>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	#text, 
+	#photo {
+		flex-grow: 1;
+		margin: 2rem;
+		padding: 3rem;
+		border-radius : 50px;
+		width: 40%;
+		align-self: stretch;
+	}
+
+	#text {
+		
+		background-color: var(--dark-gray);
+	}
+
+	#photo {
+		background: var(--lomr-gradient);
+	}
+</style>
