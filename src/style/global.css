@@ -47,8 +47,6 @@ main {
 	padding: 2rem 5rem;
 	flex-direction: row;
 	flex-wrap: wrap;
-	align-content: flex-start;
-	align-items: stretch;
 }
 
 footer {
