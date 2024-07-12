@@ -14,7 +14,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 		<main>
 			
 			<div id="photo">
-
+				<img src="photo.jpg">
 			</div>
 
 			<div id="text">
@@ -35,20 +35,29 @@ Et laudantium quas et.
 <style>
 	#text, 
 	#photo {
-		flex-grow: 1;
-		margin: 2rem;
+		flex-grow: 1 1;
+		margin: 1rem 2rem;
 		padding: 3rem;
 		border-radius : 50px;
-		width: 40%;
-		align-self: stretch;
+		width: 30%;
+		align-self: stretch;		
 	}
 
-	#text {
-		
+	#text {		
 		background-color: var(--dark-gray);
 	}
 
 	#photo {
 		background: var(--lomr-gradient);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#photo img {
+		display: inline-block;
+		max-width: 100%;	
+		border-radius: 50px;
+		object-fit: contain;
 	}
 </style>
