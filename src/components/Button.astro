@@ -13,11 +13,18 @@ const { text } = Astro.props;
         
 		font-size: 2rem;
         font-weight: bold;
-        border-radius: 100px;
+        border-radius: 50px;
         border-width: 0px;
         display: inline-block;
-        padding: 5px 25px;
+        padding: 0.3rem 1.5rem;
         background-image: var(--lomr-gradient)
+    }
+
+    @media (max-width: 768px) {
+        button {
+            font-size: 1rem;
+            padding: 0.3rem 1rem;
+        }
     }
 </style>
 
