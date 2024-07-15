@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { Content as CGV } from "./md/cgv.md";
 
 ---
 
@@ -12,38 +13,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			
-			<div id="exemples">
-				<div></div>
-
-				<div></div>
-			</div>
-			<div id="solutions">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-
-
+            <content>
+			    <CGV />
+            </content>
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <style>
-	main div {
-		width: 100%;
-		display: flex;
-		border-radius: 50px;
-		gap: 5rem;
-	}
-
-	#exemples div{
-		background-color: white;	
-		margin-bottom: 2.5rem;	
-	}
-
-	#solutions div{
-		background: var(--lomr-gradient);
-	}
+    content {
+        width: 100vh;
+        font-size: large;
+    }
 </style>
