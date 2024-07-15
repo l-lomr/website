@@ -44,12 +44,12 @@ function calcTrianglePos() {
 			+ (active.clientWidth-parseInt(window.getComputedStyle(active).paddingRight))/2 
 			- triangle.getBoundingClientRect().width/2;
 
-		triangle.style.left = newX+'px';
+		triangle.style.left = newX+"px";
 		triangle.style.visibility  = "visible";
 
-		leftHide.style.width = newX+'px';
+		leftHide.style.width = newX+"px";
 		rightHide.style.left = (newX+triangle.getBoundingClientRect().width)+"px";
-		rightHide.style.width = (window.screen.width-newX-triangle.getBoundingClientRect().width)+'px';
+		rightHide.style.width = (window.innerWidth-newX-triangle.getBoundingClientRect().width)+"px";
 	}
 		
 }
@@ -78,7 +78,7 @@ window.addEventListener("resize", (event) => {
 	.hide {
 		position: absolute;
 		background-color: black;
-		width: 200%;
+		width: 100%;
 		height: 24px;
 	}
 
