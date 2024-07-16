@@ -44,7 +44,7 @@ main {
 	background-color: rgba(0,0,0,0.6);
 	background-blend-mode: darken;
 
-	padding: 2rem 5rem;
+	padding: 2vh 5vw;
 	flex-direction: row;
 	flex-wrap: wrap;
 	
@@ -55,7 +55,7 @@ footer {
 	flex-shrink: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	nav a:not(:last-child) {
 		padding: 0;
 	}

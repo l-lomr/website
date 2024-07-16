@@ -57,7 +57,7 @@ Et laudantium quas et.
 		background: var(--lomr-gradient);
 		border-radius: 50px;
 		padding: 1.5rem;
-		margin: 0rem 2rem;
+		margin: 0rem 1.6vw;
 		font-size: 4.5rem;
 		font-weight: bold;
 		text-align: center;
@@ -75,8 +75,8 @@ Et laudantium quas et.
 	.etape {
 		flex-grow: 1;
 		background-color: var(--dark-gray);
-		margin: 2rem;
-		padding: 3rem;
+		margin: 1.6vw;
+		padding: 2.5vw;
 		border-radius : 50px;
 		width: 33%;
 	}
@@ -92,5 +92,22 @@ Et laudantium quas et.
 		font-weight: bold;
 	}
 
+	@media (max-width: 768px) {
+
+		#soustitre {
+			padding: 0.5rem;
+			font-size: 2.5rem;
+		}
+
+		#etapes-container {
+			flex-wrap: wrap;
+		}
+
+		.etape {
+			flex-grow: 1;
+			background-color: var(--dark-gray);
+			margin: 1rem 1.6vw;
+		}
+	}
 	
 </style>

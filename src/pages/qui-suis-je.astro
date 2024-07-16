@@ -33,11 +33,15 @@ Et laudantium quas et.
 </html>
 
 <style>
+	main {
+		flex-wrap: wrap-reverse;
+	}
+
 	#text, 
 	#photo {
 		flex-grow: 1 1;
-		margin: 1rem 2rem;
-		padding: 3rem;
+		margin: 1vh 1.6vw;
+		padding: 2.5vmin;
 		border-radius : 50px;
 		width: 30%;
 		align-self: stretch;		
@@ -45,6 +49,7 @@ Et laudantium quas et.
 
 	#text {		
 		background-color: var(--dark-gray);
+		padding: 3vw;
 	}
 
 	#photo {
@@ -60,4 +65,13 @@ Et laudantium quas et.
 		border-radius: 50px;
 		object-fit: contain;
 	}
+
+	@media (max-width: 768px) {
+	
+		#text, 
+		#photo {
+			width: 100%;
+		}	
+	}
+}
 </style>
