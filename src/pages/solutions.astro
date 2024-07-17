@@ -15,7 +15,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 			
 			<div id="exemples">
 				<div></div>
-
 				<div></div>
 			</div>
 			<div id="solutions">
@@ -35,15 +34,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 		width: 100%;
 		display: flex;
 		border-radius: 50px;
-		gap: 5rem;
+		gap: 4vw;
 	}
 
 	#exemples div{
 		background-color: white;	
-		margin-bottom: 2.5rem;	
+		margin-bottom: 2vh;	
 	}
 
 	#solutions div{
 		background: var(--lomr-gradient);
+	}
+
+	@media (max-width: 768px) {
+	
+		main div {
+			flex-wrap: wrap;
+		}	
 	}
 </style>

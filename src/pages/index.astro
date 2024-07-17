@@ -3,7 +3,6 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import { Content as Home } from "./home.md";
 import getTags from "../scripts/getTags";
 
 const posts = await Astro.glob("../posts/*.md");
@@ -22,27 +21,35 @@ const tags = getTags(posts);
 			</div>
 			<div id="etapes-container">	
 				<div class="etape">
-					<h3>Étape 1</h3>
+					<h3>Étape 1 : Diagnostic initial gratuit</h3>
 					<p>
-						Lorem ipsum dolor sit amet. Ut error Quis ut molestiae officia id doloremque deleniti et consectetur enim in labore perspiciatis et praesentium totam. In fugit vitae qui soluta libero qui corporis dolorem. Et dignissimos itaque eos voluptatem minus qui dolor perspiciatis est sapiente ratione ut dolores facilis eum nesciunt dolorem. Aut magni cupiditate ea dolorem dicta nam pariatur fugit sit ducimus consequatur et voluptatem asperiores qui nemo fugiat ut quia dolore.
-Et omnis ullam qui expedita quidem qui nihil unde et nesciunt impedit. Rem molestiae internos sed harum doloremque 33 facilis error non consequatur corporis.
-Et laudantium quas et.
+						Je réalise avec vous un premier diagnostic gratuit d'1h30 environ,
+						<br>
+						<br>
+						Ce diagnostic permet d'identifier quelles sont les 6 priorités de votre entreprise en terme de sécurité des sytèmes d'information.
+						Ces priorités sont réalisables en 6 mois par vos équipes, vos prestataires, ou tout simplement par moi !
+						<br>
+						<br>
+						Note : ce diagnostic est réalisé avec le service <a href="https://www.monaidecyber.ssi.gouv.fr/">MonAideCyber</a> de l'ANSSI.
 					</p>
 				</div>
 				<div class="etape">
-					<h3>Étape 2</h3>
+					<h3>Étape 2 : Accompagnement sur-mesure</h3>
 					<p>
-						Lorem ipsum dolor sit amet. Ut error Quis ut molestiae officia id doloremque deleniti et consectetur enim in labore perspiciatis et praesentium totam. In fugit vitae qui soluta libero qui corporis dolorem. Et dignissimos itaque eos voluptatem minus qui dolor perspiciatis est sapiente ratione ut dolores facilis eum nesciunt dolorem. Aut magni cupiditate ea dolorem dicta nam pariatur fugit sit ducimus consequatur et voluptatem asperiores qui nemo fugiat ut quia dolore.
-Et omnis ullam qui expedita quidem qui nihil unde et nesciunt impedit. Rem molestiae internos sed harum doloremque 33 facilis error non consequatur corporis.
-Et laudantium quas et.
+						Sur la base du diagnostic initial, je vous accompagne dans la mise en place de mesures de sécurité.
+						<br>
+						<br>
+						Nous travaillons ensemble à appliquer les actions identifiées dans le diagnostic dans le respect de vos contraintes.
+						Si besoin, nous réalisons des diagnostics avancés sur des thématiques spécifiques à votre entreprise.
+						<br>
+						<br>
+						L'objectif principal est de protéger efficacement votre entreprise et de garantir au maximum la continuité de vos activtiés.
 					</p>
 				</div>
 				<div class="etape">
-					<h3>Étape 3</h3>
+					<h3>Étape 3 : Suivi régulier</h3>
 					<p>
-						Lorem ipsum dolor sit amet. Ut error Quis ut molestiae officia id doloremque deleniti et consectetur enim in labore perspiciatis et praesentium totam. In fugit vitae qui soluta libero qui corporis dolorem. Et dignissimos itaque eos voluptatem minus qui dolor perspiciatis est sapiente ratione ut dolores facilis eum nesciunt dolorem. Aut magni cupiditate ea dolorem dicta nam pariatur fugit sit ducimus consequatur et voluptatem asperiores qui nemo fugiat ut quia dolore.
-Et omnis ullam qui expedita quidem qui nihil unde et nesciunt impedit. Rem molestiae internos sed harum doloremque 33 facilis error non consequatur corporis.
-Et laudantium quas et.
+						zouzou
 					</p>
 				</div>
 			</div>	
@@ -58,7 +65,7 @@ Et laudantium quas et.
 		border-radius: 50px;
 		padding: 1.5rem;
 		margin: 0rem 1.6vw;
-		font-size: 4.5rem;
+		font-size: 4vw;
 		font-weight: bold;
 		text-align: center;
 		align-self: flex-start;
@@ -79,6 +86,10 @@ Et laudantium quas et.
 		padding: 2.5vw;
 		border-radius : 50px;
 		width: 33%;
+	}
+
+	.etape:hover {
+		background: var(--lomr-gradient-transparent);
 	}
 
 	.etape h3 {
@@ -105,8 +116,10 @@ Et laudantium quas et.
 
 		.etape {
 			flex-grow: 1;
-			background-color: var(--dark-gray);
+			background-color: var(--dark-gray);			
+			padding: 5vw;
 			margin: 1rem 1.6vw;
+			width: 100%
 		}
 	}
 	
