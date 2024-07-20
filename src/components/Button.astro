@@ -4,7 +4,6 @@ const { text } = Astro.props;
 
 <button>
     {text}
-
 </button>
 
 
@@ -17,7 +16,8 @@ const { text } = Astro.props;
         border-width: 0px;
         display: inline-block;
         padding: 0.3rem 1.5rem;
-        background-image: var(--lomr-gradient)
+        background-image: var(--lomr-gradient);
+        cursor: pointer;
     }
 
     @media (max-width: 768px) {

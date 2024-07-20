@@ -7,7 +7,7 @@ import Button from "./Button.astro";
 
 <header>
 	<div class="header-section">
-			<div id="toplogo" class="navcolumn" ><a href="/"><img src="/LogoBLANC.png" alt="Logo LOMR Cybersécurité"></a></div>
+			<div id="toplogo" class="navcolumn"><a href="/"><img src="/LogoBLANC.png" alt="Logo LOMR Cybersécurité"></a></div>
 			
 			<nav class="navcolumn">
 				<HeaderLink href="/">Accueil</HeaderLink>
@@ -21,7 +21,7 @@ import Button from "./Button.astro";
 				<span></span>
 				<span></span>
 			</button>
-			<div id="contact" class="navcolumn"><HeaderLink href="mailto:contact@lomr.fr"></HeaderLink><Button text="CONTACT"/></HeaderLink></div>
+			<div id="contact" class="navcolumn"><a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a></div>
 			
 
 	</div>
@@ -143,7 +143,7 @@ nav a:not(:last-child) {
 
 header .separator {
 	background: var(--lomr-gradient);
-	height: 1vh;
+	height: 10px;
 	width: 100%;
 }
 
