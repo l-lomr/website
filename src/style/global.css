@@ -9,6 +9,11 @@
 	--gray: #6b6b6b;
 
 	--dark-gray: #262B32;
+	--blue: #00cbff;
+	--pink: #fc00ff;
+	--dark-blue: #18657D;
+	--dark-pink: #741B7D;
+
 	--lomr-gradient: linear-gradient(to right, #00cbff 0%, #fc00ff  100%);
 	--lomr-gradient-transparent: linear-gradient(to right, #18657D 0%, #741B7D  100%);
 }

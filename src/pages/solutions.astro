@@ -14,7 +14,70 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 		<main>
 			
 			<div id="exemples">
-				<div></div>
+				<div>
+					<h2>Exemple de devis #1 : TPE de quelques employés</h2>
+					<h4>Client</h4>
+					<p>
+						Justin Modeupace<br>
+						123 Allée des Jonquilles<br>
+						87000 Limoges
+					</p>
+					<table class="devis">
+						<thead>
+							<tr>
+								<th>Désignation</th>
+								<th>Prix Unitaire</th>
+								<th>Quantité</th>
+								<th>Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Diagnostic initial (Gratuit)</td>
+								<td>0,00 €</td>
+								<td>1</td>
+								<td>0,00 €</td>
+							</tr>
+							<tr>
+								<td>Inventaire du SI</td>
+								<td>75,00 € / heure</td>
+								<td>2</td>
+								<td>150,00 €</td>
+							</tr>
+							<tr>
+								<td>Audit/Rédaction de politique de mot de passe</td>
+								<td>200,00 €</td>
+								<td>1</td>
+								<td>200,00 €</td>
+							</tr>							
+							<tr>
+								<td>Formation de groupe (1h)</td>
+								<td>50,00 € / personne</td>
+								<td>5</td>
+								<td>250,00 €</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="total-devis">
+						<tbody>
+							<tr>
+								<th>Total</th>
+								<td>600 €</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="explications">
+						Notre client, dirigeant d'une petite entreprise de 5 employés sensibilisé à la cybersécurité, souhaite passer à l'action. 
+						Un premier diagnostic est réalisé, en utilisant l'outil MonAideCyber mis en place par l'ANSSI. 
+						Ce diagnostic met en évidence un certain nombre de défaillances en ce qui concerne la sécurité de l'entreprise.
+						<br>
+						Le dirigeant se charge de plusieurs points en interne, mais souhaite être accompagné pour d'autres.
+						Ainsi, nous réalisons ensemble un inventaire initial du système d'information de l'entreprise, et nous mettons en place une politique
+						de mot de passe/authentification adaptée aux besoins de celle-ci. 
+						Enfin, nous prévoyons une formation générale à destination des employés afin d'expliquer cette politique de mot de passe et d'expliquer 
+						un certain nombre de dangers comme le phishing ou les ransomwares.
+					</p>
+				</div>
 				<div></div>
 			</div>
 			<div id="solutions">
@@ -23,6 +86,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 				<div></div>
 			</div>
 
+			
 
 		</main>
 		<Footer />
@@ -30,6 +94,57 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 </html>
 
 <style>
+	h2 {
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	}
+
+	h4 {
+		margin: 0;
+		color: var(--blue);
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.devis {
+		width: 100%;
+		border-collapse: collapse;
+		text-align: center;
+		margin-top: 2vh;
+	}
+
+	.total-devis {
+		float: right;
+		font-size: x-large;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		width: 20%;
+	}
+
+	.total-devis td {		
+		font-weight: bold;
+	}
+
+	.explications {
+		clear: both;
+	}
+
+	thead {
+		border-bottom: 2px solid var(--blue);		
+	}
+
+	th {
+		color: var(--blue);
+		font-weight: bold;
+	}
+
+	tbody {
+		font-weight: normal;
+	}
+
 	main div {
 		width: 100%;
 		display: flex;
@@ -38,8 +153,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	}
 
 	#exemples div{
+		display: block;
 		background-color: white;	
 		margin-bottom: 2vh;	
+		color: var(--black);
+		padding: 1em;
 	}
 
 	#solutions div{
