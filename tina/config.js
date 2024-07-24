@@ -73,36 +73,36 @@ export default defineConfig({
 						list: true,
 						options: [
 							{
-								value: "technical",
-								label: "Technical",
+								value: "actualite",
+								label: "Actualité",
 							},
 							{
-								value: "advice",
-								label: "Advice",
+								value: "crypto",
+								label: "Cryptographie",
 							},
 							{
-								value: "events",
-								label: "Events",
+								value: "auth",
+								label: "Authentification",
 							},
 							{
-								value: "learning",
-								label: "Learning",
+								value: "reseau",
+								label: "Réseau",
 							},
 							{
-								value: "meta",
-								label: "Meta",
+								value: "windows",
+								label: "Windows",
 							},
 							{
-								value: "work",
-								label: "Work",
+								value: "linux",
+								label: "Linux",
 							},
 							{
-								value: "personal",
-								label: "Personal",
+								value: "serveur",
+								label: "Serveur",
 							},
 							{
-								value: "musings",
-								label: "Musings",
+								value: "cloud",
+								label: "Cloud",
 							},
 						],
 					},
