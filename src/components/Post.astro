@@ -3,19 +3,30 @@ const { slug, title, tags, description, date } = Astro.props;
 ---
 
 <li class="post">
-	<a href={`/post/${slug}/`} class="title">{title}</a>
-	<time datetime={date}>
-		{
-			new Date(date).toLocaleDateString("en-us", {
-				year: "numeric",
-				month: "short",
-				day: "numeric",
-			})
-		}
-	</time>
-	<br />
-	{description && <span class="excerpt">{description}</span>}
 	<div>
+	<a href={`/post/${slug}/`} class="title">
+		<span>
+
+		</span>
+		<span>
+			<time datetime={date}>
+				{
+					new Date(date).toLocaleDateString("fr-fr", {
+						year: "numeric",
+						month: "numeric",
+						day: "numeric",
+					})
+				}
+			</time>
+			<br />
+
+			{title}
+
+			<br />
+			{description && <span class="excerpt">{description}</span>}
+		</span>
+	</a>
+	<span>
 		{
 			tags &&
 				tags.map((tag) => (
@@ -24,5 +35,44 @@ const { slug, title, tags, description, date } = Astro.props;
 					</a>
 				))
 		}
+	</span>
 	</div>
 </li>
+
+<style>
+	li {
+		display: block;
+		min-width: 15%;
+		font-size: 1.5rem;
+		background: var(--lomr-gradient-transparent);
+		border-radius: 50px;
+		padding: 2vw;
+	}
+
+	li div {
+		display: block;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a.title {
+		display: block;
+	}
+
+	.excerpt {
+		font-size: 1rem;
+	}
+
+	.tag {
+		font-size: 1rem;
+	}
+
+	@media (max-width: 768px) {
+		li {
+			min-width: 60%;
+			padding: 5vw;
+		}
+	}
+</style>

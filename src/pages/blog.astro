@@ -3,7 +3,6 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Post from "../components/Post.astro";
-import ColorScript from "../components/ColorScript.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
@@ -21,9 +20,9 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<p>Contenu à venir prochainement</p>
+			<!--p>Contenu à venir prochainement</p-->
 			<content>
-				<!--<ul class="posts-list">
+				<ul class="posts-list">
 					{
 						posts.map(
 							({
@@ -32,9 +31,8 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 							}) => <Post {description} {date} {slug} {title} {tags} />
 						)
 					}
-				</ul> -->
+				</ul>
 			</content>
-
 		</main>
 		<Footer />
 	</body>
@@ -46,4 +44,32 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 		width: 100%;
 		text-align: center;
 	}
+
+	content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-content: center;		
+		justify-content: flex-start;
+		margin: 0;
+	}
+
+	ul {		
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: flex;	
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 2vw;		
+		list-style-type:none;
+		flex-grow: 0;
+		
+	}
+
+	@media (max-width: 768px) {
+
+	}
+
+	
 </style>

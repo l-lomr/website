@@ -3,7 +3,6 @@ import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import Post from "../../components/Post.astro";
-import ColorScript from "../../components/ColorScript.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../config";
 
@@ -48,7 +47,7 @@ let sortedPosts = tag.sort(
 		<Header />
 		<main>
 			<content>
-				<h3>Posts tagged with "{currentTag}"</h3>
+				<h3>Posts avec le tag "{currentTag}"</h3>
 				<ul class="tags-list">
 					{
 						sortedPosts.map(
@@ -60,8 +59,32 @@ let sortedPosts = tag.sort(
 					}
 				</ul>
 			</content>
-			<Footer />
-		</main>
-		<ColorScript />
+		</main>		
+		<Footer />
 	</body>
 </html>
+
+<style>
+	content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-content: center;		
+		justify-content: flex-start;
+		margin: 0;
+	}
+
+	ul {		
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: flex;	
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 2vw;		
+		list-style-type:none;
+		flex-grow: 0;
+		
+	}
+	
+</style>
