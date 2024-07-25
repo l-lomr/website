@@ -67,6 +67,11 @@ export default defineConfig({
 						required: true,
 					},
 					{
+						type: 'image',
+						label: 'Hero image',
+						name: 'mainImg',
+					},
+					{
 						label: "Tags",
 						name: "tags",
 						type: "string",
@@ -132,7 +137,7 @@ export default defineConfig({
 	search: {
 		tina: {
 			indexerToken: process.env.TINASEARCH,
-			stopwordLanguages: ["eng"],
+			stopwordLanguages: ["fra"],
 		},
 		indexBatchSize: 50,
 		maxSearchIndexFieldLength: 100,
