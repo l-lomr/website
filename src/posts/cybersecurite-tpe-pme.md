@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/BlogPost.astro
-title: Cybersécurité d'une TPME/PME
+title: Cybersécurité d'une TPE/PME
 slug: cybersecurite-tpe-pme
 description: Quel premier pas pour une TPE/PME soucieuse de sa cybersécurité ?
 cover: /assets/PUBLI1.jpg
