@@ -68,8 +68,14 @@ export default defineConfig({
 					},
 					{
 						type: 'image',
-						label: 'Hero image',
-						name: 'mainImg',
+						label: 'Couverture',
+						name: 'cover',
+					},
+					{
+						label: "Alt couverture",
+						name: "altCover",
+						type: "string",
+						required: true,
 					},
 					{
 						label: "Tags",

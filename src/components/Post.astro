@@ -1,12 +1,15 @@
 ---
-const { slug, title, tags, description, date, mainImg } = Astro.props;
+const { slug, title, tags, description, date, cover } = Astro.props;
+console.log('BIPBIPBIP');
+console.log(cover);
+console.log(title);
 ---
 
 <li class="post">
 	<div>
 	<a href={`/post/${slug}/`} class="title">
 		<div class="top">
-			{ mainImg && <img class="mainimg" src={`${mainImg}`}/>}
+			{ cover && <img class="cover" src={`${cover}`}/>}
 		</div>
 		<div class="bottom">
 			<time datetime={date}>
@@ -19,7 +22,6 @@ const { slug, title, tags, description, date, mainImg } = Astro.props;
 				}
 			</time>
 			<br />
-
 			{title}
 
 			<br />
@@ -41,14 +43,16 @@ const { slug, title, tags, description, date, mainImg } = Astro.props;
 
 <style>
 	li {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		min-width: 15%;
 		background: var(--lomr-gradient);
 		border-radius: 50px;
 	}
 
 	li div {
-		display: block;
+		display: flex;
+		flex-direction: column;
 	}
 
 	a {
@@ -76,14 +80,24 @@ const { slug, title, tags, description, date, mainImg } = Astro.props;
 	.top {
 		display: block;
 		min-width: 1px;
-		min-height: 8vh;
+		height: 8vh;
 		border-top-left-radius: 50px;
 		border-top-right-radius: 50px;
 		background-color: var(--white);
+		flex: 0 0 auto;
+		overflow: hidden;
+	}
+
+	.top img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top;
 	}
 
 	.bottom {
 		padding: 0.5vw 2vw 5px 2vw;
+		flex-grow: 1;
 	}
 
 	@media (max-width: 768px) {
@@ -92,7 +106,7 @@ const { slug, title, tags, description, date, mainImg } = Astro.props;
 		}
 
 		.bottom {
-		padding: 0.5vw 5vw 5px 5vw;
-	}
+			padding: 0.5vw 5vw 5px 5vw;
+		}
 	}
 </style>

@@ -9,7 +9,7 @@ const posts = await Astro.glob("../posts/*.md");
 const allTags = getTags(posts);
 
 let {
-	content: { title, description, added, updated, tags, heroImage },
+	content: { title, description, added, updated, tags, cover },
 } = Astro.props;
 
 added = new Date(added).toLocaleDateString(
@@ -40,7 +40,7 @@ if (updated) {
 		<Header />
 		<main>
 			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+				{cover && <img width={720} height={360} src={cover} alt="" />}
 				<h1 class="article-title">{title}</h1>
 				{updated ?
 					<span><time>{added}</time>, last updated on <time>{updated}</time></span>
