@@ -61,6 +61,12 @@ footer {
 	flex-shrink: 0;
 }
 
+.blog-post img {
+	display: block;
+	margin: auto;
+	width: 60%;
+}
+
 @media (max-width: 768px) {
 	nav a:not(:last-child) {
 		padding: 0;
