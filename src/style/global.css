@@ -14,6 +14,8 @@
 	--dark-blue: #18657D;
 	--dark-pink: #741B7D;
 
+	--black-alpha: rgba(0,0,0,0.6);
+
 	--lomr-gradient: linear-gradient(to right, #00cbff 0%, #fc00ff  100%);
 	--lomr-gradient-transparent: linear-gradient(to right, #18657D 0%, #741B7D  100%);
 }
@@ -47,7 +49,7 @@ main {
 	flex: 1;
 	display: flex;
 	background-image: url(/LOMR_CG.png);
-	background-color: rgba(0,0,0,0.6);
+	background-color: var(--black-alpha);
 	background-blend-mode: darken;
 
 	padding: 2vh 5vw;

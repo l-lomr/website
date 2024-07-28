@@ -25,7 +25,7 @@ const { slug, title, tags, description, date, cover } = Astro.props;
 			{description && <span class="excerpt">{description}</span>}
 		</div>
 	</a>
-	<div class="bottom">
+	<div class="tags-container bottom">
 		{
 			tags &&
 				tags.map((tag) => (
@@ -74,10 +74,6 @@ const { slug, title, tags, description, date, cover } = Astro.props;
 		text-wrap: wrap;
 	}
 
-	.tag {
-		font-size: 1rem;
-	}
-
 	.top {
 		display: block;
 		min-width: 1px;
@@ -99,7 +95,20 @@ const { slug, title, tags, description, date, cover } = Astro.props;
 
 	.bottom {
 		padding: 0.5vw 2vw 5px 2vw;
-		flex-grow: 1;
+		
+	}
+
+	li div.tags-container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		gap: 1vw;
+	}
+
+	.tag {
+		font-size: 1rem;
+		max-width: 30%;
+		text-decoration: underline;
 	}
 
 	@media (max-width: 768px) {
