@@ -54,21 +54,22 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 		margin: 0;
 	}
 
-	ul {		
+	ul.posts-list {
+		display: grid;
 		width: 100%;
 		margin: 0;
 		padding: 0;
-		display: flex;	
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 2vw;		
 		list-style-type:none;
-		flex-grow: 0;
-		
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: 1fr;
+		grid-column-gap: 2vw;
+ 		grid-row-gap: 2vw;
 	}
 
 	@media (max-width: 768px) {
-
+		ul.posts-list {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	

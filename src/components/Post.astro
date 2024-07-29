@@ -39,19 +39,12 @@ const { slug, title, tags, description, date, cover } = Astro.props;
 </li>
 
 <style>
-	li {
-		display: flex;
-		flex-direction: column;
-		min-width: 20%;
-		max-width: 20%;
+	li {		
 		background: var(--lomr-gradient);
 		border-radius: 55px;
-		flex: 1 1 0px;
 	}
 
 	li div {
-		display: flex;
-		flex-direction: column;
 	}
 
 	a {
@@ -71,16 +64,15 @@ const { slug, title, tags, description, date, cover } = Astro.props;
 
 	.excerpt {
 		font-size: 1rem;
-		text-wrap: wrap;
+		display: block;
+		overflow-wrap: break-word;
 	}
 
 	.top {
-		display: block;
 		min-width: 1px;
 		height: 8vh;
 		border-top-left-radius: 50px;
 		border-top-right-radius: 50px;
-		flex: 0 0 auto;
 		overflow: hidden;
 	}
 
@@ -99,25 +91,32 @@ const { slug, title, tags, description, date, cover } = Astro.props;
 	}
 
 	li div.tags-container {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		gap: 1vw;
+		padding-bottom: 1vh;
+		text-align: center;
 	}
 
 	.tag {
 		font-size: 1rem;
-		max-width: 30%;
 		text-decoration: underline;
+		padding-right: 1vw;
 	}
 
 	@media (max-width: 768px) {
-		li {
-			min-width: 60%;
-		}
-
+		
 		.bottom {
 			padding: 0.5vw 5vw 5px 5vw;
+		}
+
+		.top {
+			height: 50vw;
+		}
+
+		li div.tags-container {
+			padding-bottom: 3vh;
+		}
+
+		li {
+			margin-bottom: 3vh;
 		}
 	}
 </style>
