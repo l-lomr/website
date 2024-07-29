@@ -12,8 +12,6 @@ added: 2024-05-22T22:00:00.000Z
 
 🤔 Quel premier pas pour une TPE/PME soucieuse de sa cybersécurité ?
 
-![](/assets/PUBLI1.jpg)
-
 Si vous lisez ce post, vous êtes déjà sur la bonne voie ! Il est essentiel de se sentir concerné par la cybersécurité de son entreprise pour pouvoir la renforcer. 🛡️
 
 ➡️ L'étape primordiale consiste à identifier quoi protéger avant de déterminer comment le protéger. Quelles données ou services sont essentiels pour vos clients et pour le bon fonctionnement de votre organisation ? Comment garantir leur disponibilité ? Si malgré tout vous étiez victime d’une attaque, comment devriez-vous réagir ?
