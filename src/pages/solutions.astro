@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import Button from "../components/Button.astro";
 
 ---
 
@@ -12,157 +13,87 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			
-			<div id="exemples">
-				<div>
-					<h2>Exemple de devis #1 : TPE de quelques employés</h2>
-					<h4>Client</h4>
-					<p>
-						Justin Modeupace<br>
-						123 Allée des Jonquilles<br>
-						87000 Limoges
-					</p>
-					<table class="devis">
-						<thead>
-							<tr>
-								<th>Désignation</th>
-								<th>Prix Unitaire</th>
-								<th>Quantité</th>
-								<th>Total</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Diagnostic initial (Gratuit)</td>
-								<td>0,00 €</td>
-								<td>1</td>
-								<td class="euros">0,00 €</td>
-							</tr>
-							<tr>
-								<td>Inventaire du SI</td>
-								<td>75,00 € / heure</td>
-								<td>2</td>
-								<td class="euros">150,00 €</td>
-							</tr>
-							<tr>
-								<td>Audit/Rédaction de politique de mot de passe</td>
-								<td>200,00 €</td>
-								<td>1</td>
-								<td class="euros">200,00 €</td>
-							</tr>							
-							<tr>
-								<td>Formation de groupe (1h)</td>
-								<td>50,00 € / personne</td>
-								<td>5</td>
-								<td class="euros">250,00 €</td>
-							</tr>
-						</tbody>
-					</table>
-					<table class="total-devis">
-						<tbody>
-							<tr>
-								<th>Total</th>
-								<td class="euros">600 €</td>
-							</tr>
-						</tbody>
-					</table>
-					<p class="explications">
-						Notre client, dirigeant d'une petite entreprise de 5 employés et sensibilisé à la cybersécurité, souhaite passer à l'action. 
-						Un premier diagnostic est réalisé, en utilisant l'outil MonAideCyber mis en place par l'ANSSI. 
-						Ce diagnostic met en évidence un certain nombre de défaillances en ce qui concerne la sécurité de l'entreprise.
-						<br>
-						Le dirigeant se charge de plusieurs points en interne, mais souhaite être accompagné pour d'autres.
-						Ainsi, nous réalisons ensemble un inventaire initial du système d'information de l'entreprise, et nous mettons en place une politique
-						de mot de passe/authentification adaptée aux besoins de celle-ci. 
-						Enfin, nous prévoyons une formation générale à destination des employés afin d'expliquer cette politique de mot de passe et d'expliquer 
-						un certain nombre de dangers comme le phishing ou les ransomwares.
-					</p>
-				</div>
-				<div>
-					<h2>Exemple de devis #2 : PME en croissance</h2>
-					<h4>Client</h4>
-					<p>
-						Eva Securiser<br>
-						45 Rue des Métros<br>
-						75001 Paris
-					</p>
-					<table class="devis">
-						<thead>
-							<tr>
-								<th>Désignation</th>
-								<th>Prix Unitaire</th>
-								<th>Quantité</th>
-								<th>Total</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Mise à jour des inventaires SI et données</td>
-								<td>700,00 € / jour</td>
-								<td>3</td>
-								<td class="euros">2100,00 €</td>
-							</tr>
-							<tr>
-								<td>Mise en place d'un protocole de réaction à incident</td>
-								<td>600,00 €</td>
-								<td>1</td>
-								<td class="euros">600,00 €</td>
-							</tr>
-							<tr>
-								<td>Audit d'application SaaS</td>
-								<td>3000,00 €</td>
-								<td>1</td>
-								<td class="euros">3000,00 €</td>
-							</tr>	
-						</tbody>
-					</table>
-					<table class="total-devis">
-						<tbody>
-							<tr>
-								<th>Total</th>
-								<td class="euros">5 700 €</td>
-							</tr>
-						</tbody>
-					</table>
-					<p class="explications">
-						Eva dirige une entreprise de plusieurs dizaines de personnes, en croissance depuis plusieurs années. 
-						Certaines mesures de sécurité sont déjà en place grâce à l'expérience d'Eva et à l'accompagnement du prestataire informatique de l'entreprise, mais des manques ont déjà été constatés.
-						<br>
-						La dirigeante demande ainsi de l'aide pour actualiser au mieux l'inventaire du SI et des données de l'entreprise.
-						Il est estimé d'un commun accord que trois jours seront nécéssaires pour réaliser correctement cette tâche.
-						L'inventaire des données et de leurs traitements pourra notamment servir à vérifier la conformité RGPD.
-						<br>
-						Eva est également inquiète de comment réagir en cas d'attaque informatique : nous travaillons ensemble à mettre en place un protocole de réaction adapté afin de minimiser une éventuelle perte d'exploitation.
-						<br>
-						Enfin, un des produits phare de l'entreprise est une application web de type SaaS. Les équipes de développement sont conscientes des bonnes pratiques de sécurité, ce à quoi Eva souhaite ajouter un audit externe acceléré pour révéler de potentielles failles de sécurité.
-
-					</p>
-				</div>
-			</div>
+					
 			<div id="solutions">
-				<div>
+				<div class="column">
 					<h2>Accompagnement initial</h2>
 					
-					<p>
-						Les solutions adaptées aux entreprises qui partent de zéro sont entre autres : des audits généraux, une évaluation des priorités de l'entreprise en terme de cybersécurité, formation aux dirigeants ou aux employés sur les bases de la cybersécurité, sécurisations des services critiques de l'entreprise (messagerie, sauvegardes, mots de passe et authentification,...), inventaires des base (SI, données), conformité RGPD,...
+					<h4>Pour qui ?</h4>
 
-					</p>
+					<p>Les entreprises, associations, collectivités soucieuses de leur cybersécurité mais qui ne sont <em>pas encore passées à l'action</em></p>
+
+					<h4>Quoi ?</h4>
+
+					<p>Un accompagnement <em>court, simple et adapté</em>, afin de rapidement mettre en place les bases de la cybersécurité</p>
+
+					<h4>Comment ?</h4>
+
+					<p>En appliquant une ou plusieurs mesures parmi entre autres : </p>
+					<ul>
+						<li>Audit de cybersécurité initial gratuit <a href="https://www.monaidecyber.ssi.gouv.fr/" target="_blank" rel="noopener noreferrer">MonAideCyber</a></li>
+						<li>Évaluation des priorités de l'entreprise</li>
+						<li>Formation des dirigeants et/ou employés</li>
+						<li>Sécurisation des services critiques de l'entreprise (messagerie, sauvegarde, mots de passe et authentification,...)</li>
+						<li>Inventaires de base (SI, données,...)</li>
+						<li>Conformité (RGPD,...)</li>
+					</ul>
+
+					<div class="cta">
+						<a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a>
+					</div>
 				</div>
-				<div>
+				<div class="column">
 					<h2>Accompagnement intermédiaire</h2>
-					<p>
-						Pour les entreprises ayant déjà des bases de sécurité peuvent être proposés : des audits poussés sur des éléments du SI de l'entreprise, la configuration et gestion d'outils de sécurité (pare-feu, antivirus), renforcement des méchanismes en place, assurance cyber, gestion d'incidents, suivi des mises à jours,...
-					</p>
+
+					<h4>Pour qui ?</h4>
+
+					<p>Les entreprises pour qui les bases sont déjà en places, et cherchent à <em>passer au niveau supérieur</em></p>
+
+					<h4>Quoi ?</h4>
+
+					<p>Un accompagnement <em>focalisé</em> sur les manques en cybersécurité et les priorités de l'entreprise</p>
+
+					<h4>Comment ?</h4>
+
+					<p>En mettant en place des solutions plus avancées : </p>
+					<ul>
+						<li>Audit poussé sur un élément du SI de l'entreprise</li>
+						<li>Configuration et gestion d'outils de sécurité (pare-feu, antivirus,...)</li>
+						<li>Renforcement des méchanismes déjà en place</li>
+						<li>Assurance cyber</li>
+						<li>Gestion d'incidents</li>
+						<li>Suivi des mises à jour</li>
+					</ul>
+
+					<div class="cta">
+						<a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a>
+					</div>
 				</div>
-				<div>
+				<div class="column">
 					<h2>Accompagnement avancé</h2>
-					<p>
-						Dans le cas d'entreprises en ayant le besoin, un accompagment sur des sujets plus poussés est proposé : configuration spécifique pour le cloud, prise en compte du nomadisme, accomapgnement en vue d'une certification (ISO27001, NIS2, DORA, CRA, HDS,...),...
-					</p>
+
+					<h4>Pour qui ?</h4>
+
+					<p>Les entreprises qui ont identifié un <em>besoin en cybersécurité spécifique</em> et ont besoin d'un intervenant externe</p>
+
+					<h4>Quoi ?</h4>
+
+					<p>Un accompagnement en profondeur sur vos sujets les plus techniques</p>
+
+					<h4>Comment ?</h4>
+
+					<p>En appliquant des solutions dédiées : </p>
+					<ul>
+						<li>Prise en compte de spécificités liées au Cloud</li>
+						<li>Accompagnement sur le nomadisme</li>
+						<li>Accompagnement en vue d'une certification (ISO27001, NIS2, DORA, CRA, HDS,...)</li>
+					</ul>
+
+					<div class="cta">
+						<a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a>
+					</div>
 				</div>
 			</div>
-
-			
 
 		</main>
 		<Footer />
@@ -174,78 +105,43 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	h2 {
 		width: 100%;
 		text-align: center;
-		margin: 0;
+		margin: 0 0 1vh 0;
+		font-size: 1.6em;
 	}
 
 	h4 {
+		font-weight: bold;
+		font-size: 1.2em;
 		margin: 0;
-		color: var(--blue);
+	}
+
+	em {
+		font-weight: bold;
+		text-decoration: underline;
 	}
 
 	p {
 		margin: 0;
 	}
 
-	.devis {
-		width: 100%;
-		border-collapse: collapse;
-		text-align: center;
-		margin-top: 2vh;
-	}
-
-	.euros {
-		text-align: right;
-		padding-right: 1vh;
-	}
-
-	.total-devis {
-		float: right;
-		font-size: x-large;
-		margin-top: 2vh;
-		margin-bottom: 2vh;
-		min-width: 20%;
-	}
-
-	.total-devis td {		
-		font-weight: bold;
-	}
-
-	.explications {
-		clear: both;
-	}
-
-	thead {
-		border-bottom: 2px solid var(--blue);		
-	}
-
-	th {
-		color: var(--blue);
-		font-weight: bold;
-	}
-
-	tbody {
-		font-weight: normal;
-	}
-
 	main div {
 		width: 100%;
 		display: flex;
 		border-radius: 50px;
-		gap: 4vw;
+		gap: 2vw;
 	}
 
-	#exemples div{
-		display: block;
-		background-color: white;	
-		margin-bottom: 2vh;	
-		color: var(--black);
-		padding: 1em;
-	}
-
-	#solutions div{
-		display: block;
+	#solutions div.column{
+		display: flex;
+		flex-direction: column;
+		gap: 2vh;
 		background: var(--lomr-gradient-transparent);
 		padding: 1em;
+	}
+
+	.cta {
+		margin-top: auto;
+		justify-content: center;		
 	}
 
 	@media (max-width: 768px) {
