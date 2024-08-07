@@ -1,4 +1,12 @@
-# Cassidy's blog template
+# My professional website and blog
+
+go see it on lomr.fr or whatever preview is on :)
+
+Based on :
+
+
+
+## Cassidy's blog template
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eab04209-5f7f-41ed-a8dd-c45a9ebb1834/deploy-status)](https://app.netlify.com/sites/blahg/deploys)
 
@@ -6,11 +14,11 @@ Hello, welcome. This is a blog ("blahg" is the proper spelling for Chicagoans) t
 
 ![cover](https://github.com/cassidoo/blahg/assets/1454517/b56ff04f-9499-48e7-be62-d9b422c4287d)
 
-## See the blahg
+### See the blahg
 
 [blahg.netlify.app](https://blahg.netlify.app/)
 
-## To use the template
+### To use the template
 
 - Connect to your chosen hosting provider (see Deploy to Netlify button below if you want to go that route, otherwise use the GitHub template button above and pick a different one)
 - Make an account at [tina.io](https://tina.io/)
@@ -29,7 +37,7 @@ After this, you can add your content to `src/posts` with Markdown files, or with
 
 And finally, please ping me (via social media, or in a GitHub Issue, or whatever) if you use this template! I would love to see your writing and subscribe to your RSS feed!
 
-## Run it yourself
+### Run it yourself
 
 All commands are run from the root of the project, from a terminal:
 
