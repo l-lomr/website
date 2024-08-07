@@ -1,0 +1,215 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<!doctype html>
+<html lang="fr-fr">
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <body>
+        <Header title={SITE_TITLE} />
+        <main>
+            <form id="test" netlify>
+                <div id="formRedirectURL">
+                    <ul>
+                        <li>
+                            <h2 role="heading" aria-level="1">
+                                <em>Contactez-moi</em>
+                            </h2>
+                        </li>
+                    </ul>
+
+                    <div id="formBodyDiv">
+                        <ul>
+                            <li id="SingleLine-li">
+                                <label for="SingleLine-arialabel">
+                                    <span>Objet*</span>
+                                </label>
+                                <div>
+                                    <span>
+                                        <input
+                                            id="SingleLine-arialabel"
+                                            aria-describedby="hint-SingleLine"
+                                            autocomplete="off"
+                                            type="text"
+                                            maxlength="255"
+                                            minlength="5"
+                                            name="SingleLine"
+                                            placeholder=""
+                                            required
+                                        />
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li id="Name-li">
+                                <label id="Name-arialabel">
+                                    <span>Nom*</span>
+                                </label>
+                                <br>
+                                <span>
+                                    <input
+                                        aria-labelledby="Name-arialabel aria-showelemslabel-Name0 ariarequired-Name0"
+                                        aria-describedby="hint-Name"
+                                        autocomplete="given-name"
+                                        type="text"
+                                        maxlength="255"
+                                        name="Name"
+                                        placeholder=""
+                                        required
+                                    />
+                                    <label
+                                        id="aria-showelemslabel-Name0"
+                                        >Prénom</label
+                                    >
+                                </span>
+                                <span>
+                                    <input
+                                        aria-labelledby="Name-arialabel aria-showelemslabel-Name1"
+                                        aria-describedby="hint-Name"
+                                        autocomplete="family-name"
+                                        type="text"
+                                        maxlength="255"
+                                        name="Name"
+                                        placeholder=""
+                                        required
+                                    />
+                                    <label
+                                        id="aria-showelemslabel-Name1"
+                                        >Nom</label
+                                    >
+                                </span>
+                            </li>
+
+                            <li id="Email-li">
+                                <label for="Email-arialabel">
+                                    <span>Email*</span>
+                                </label>
+                                <div>
+                                    <input
+                                        inputmode="email"
+                                        id="Email-arialabel"
+                                        aria-describedby="hint-Email"
+                                        autocomplete="email"
+                                        type="email"
+                                        maxlength="255"
+                                        name="Email"
+                                        placeholder=""                                        
+                                        required
+                                    />
+                                </div>
+                            </li>
+
+                            <li id="MultiLine-li">
+                                <label for="MultiLine-arialabel">
+                                    <span
+                                        >Donnez-moi des précisions sur votre besoin</span
+                                    >
+                                </label>
+                                <div>
+                                    <span>
+                                        <textarea
+                                            id="MultiLine-arialabel"
+                                            aria-describedby="hint-MultiLine countMsg-MultiLine"
+                                            autocomplete="off"
+                                            name="MultiLine"
+                                            placeholder=""></textarea>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li id="HtmlText-li">
+                                <label>Je reviens vers vous dans les prochains jours !</label
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul>
+                        <li style="overflow:visible; position: relative;">
+                            <button value="submit">
+                                <em>Envoyer ma demande</em>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </main>
+        <Footer />
+    </body>
+</html>
+
+
+<style>
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        clear: both;
+        margin-bottom: 1vh;
+    }
+
+    #Name-li span {
+        display: block;
+        width: 44%;
+        float: left;
+        margin-right: 6%;
+    }
+
+    #Name-li span input {
+        width: 100%;
+    }
+
+    #Name-li span label {
+        clear: both;
+        font-size: 1rem;
+    }
+
+
+    form {
+        background-color: var(--dark-gray);
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        padding: 2vw;
+    }
+
+    form button {
+        font-size: 2rem;
+        font-weight: bold;
+        border-radius: 50px;
+        border-width: 0px;
+        display: inline-block;
+        padding: 0.3rem 1.5rem;
+        background-image: var(--lomr-gradient);
+        cursor: pointer;
+    }
+
+    input, textarea {
+        border-radius: 25px;
+        color: var(--black);
+        border-width: 0;
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+
+    input:invalid {
+        background: pink;
+    }
+
+    input {
+        width: 50%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+    @media (max-width: 768px) {
+    }
+</style>
