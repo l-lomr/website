@@ -11,130 +11,125 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     <body>
         <Header title={SITE_TITLE} />
         <main>
-            <form id="test" netlify>
-                <div id="formRedirectURL">
-                    <ul>
-                        <li>
-                            <h2 role="heading" aria-level="1">
-                                <em>Contactez-moi</em>
-                            </h2>
-                        </li>
-                    </ul>
+            <form id="lomr-contact-form" method="POST" action="/contact-success" netlify>                
+                <ul>
+                    <li>
+                        <h2 role="heading" aria-level="1">
+                            <em>Contactez-moi</em>
+                        </h2>
+                    </li>
+                </ul>
+                <ul>
+                    <li id="SingleLine-li">
+                        <label for="SingleLine-arialabel">
+                            <span>Objet*</span>
+                        </label>
+                        <div>
+                            <span>
+                                <input
+                                    id="SingleLine-arialabel"
+                                    aria-describedby="hint-SingleLine"
+                                    autocomplete="off"
+                                    type="text"
+                                    maxlength="255"
+                                    minlength="5"
+                                    name="SingleLine"
+                                    placeholder=""
+                                    required
+                                />
+                            </span>
+                        </div>
+                    </li>
 
-                    <div id="formBodyDiv">
-                        <ul>
-                            <li id="SingleLine-li">
-                                <label for="SingleLine-arialabel">
-                                    <span>Objet*</span>
-                                </label>
-                                <div>
-                                    <span>
-                                        <input
-                                            id="SingleLine-arialabel"
-                                            aria-describedby="hint-SingleLine"
-                                            autocomplete="off"
-                                            type="text"
-                                            maxlength="255"
-                                            minlength="5"
-                                            name="SingleLine"
-                                            placeholder=""
-                                            required
-                                        />
-                                    </span>
-                                </div>
-                            </li>
+                    <li id="Name-li">
+                        <label id="Name-arialabel">
+                            <span>Nom*</span>
+                        </label>
+                        <br>
+                        <span>
+                            <input
+                                aria-labelledby="Name-arialabel aria-showelemslabel-Name0 ariarequired-Name0"
+                                aria-describedby="hint-Name"
+                                autocomplete="given-name"
+                                type="text"
+                                maxlength="255"
+                                name="Name"
+                                placeholder=""
+                                required
+                            />
+                            <label
+                                id="aria-showelemslabel-Name0"
+                                >Prénom</label
+                            >
+                        </span>
+                        <span>
+                            <input
+                                aria-labelledby="Name-arialabel aria-showelemslabel-Name1"
+                                aria-describedby="hint-Name"
+                                autocomplete="family-name"
+                                type="text"
+                                maxlength="255"
+                                name="Name"
+                                placeholder=""
+                                required
+                            />
+                            <label
+                                id="aria-showelemslabel-Name1"
+                                >Nom</label
+                            >
+                        </span>
+                    </li>
 
-                            <li id="Name-li">
-                                <label id="Name-arialabel">
-                                    <span>Nom*</span>
-                                </label>
-                                <br>
-                                <span>
-                                    <input
-                                        aria-labelledby="Name-arialabel aria-showelemslabel-Name0 ariarequired-Name0"
-                                        aria-describedby="hint-Name"
-                                        autocomplete="given-name"
-                                        type="text"
-                                        maxlength="255"
-                                        name="Name"
-                                        placeholder=""
-                                        required
-                                    />
-                                    <label
-                                        id="aria-showelemslabel-Name0"
-                                        >Prénom</label
-                                    >
-                                </span>
-                                <span>
-                                    <input
-                                        aria-labelledby="Name-arialabel aria-showelemslabel-Name1"
-                                        aria-describedby="hint-Name"
-                                        autocomplete="family-name"
-                                        type="text"
-                                        maxlength="255"
-                                        name="Name"
-                                        placeholder=""
-                                        required
-                                    />
-                                    <label
-                                        id="aria-showelemslabel-Name1"
-                                        >Nom</label
-                                    >
-                                </span>
-                            </li>
+                    <li id="Email-li">
+                        <label for="Email-arialabel">
+                            <span>Email*</span>
+                        </label>
+                        <div>
+                            <input
+                                inputmode="email"
+                                id="Email-arialabel"
+                                aria-describedby="hint-Email"
+                                autocomplete="email"
+                                type="email"
+                                maxlength="255"
+                                name="Email"
+                                placeholder=""                                        
+                                required
+                            />
+                        </div>
+                    </li>
 
-                            <li id="Email-li">
-                                <label for="Email-arialabel">
-                                    <span>Email*</span>
-                                </label>
-                                <div>
-                                    <input
-                                        inputmode="email"
-                                        id="Email-arialabel"
-                                        aria-describedby="hint-Email"
-                                        autocomplete="email"
-                                        type="email"
-                                        maxlength="255"
-                                        name="Email"
-                                        placeholder=""                                        
-                                        required
-                                    />
-                                </div>
-                            </li>
+                    <li id="MultiLine-li">
+                        <label for="MultiLine-arialabel">
+                            <span
+                                >Donnez-moi des précisions sur votre besoin</span
+                            >
+                        </label>
+                        <div>
+                            <span>
+                                <textarea
+                                    id="MultiLine-arialabel"
+                                    aria-describedby="hint-MultiLine countMsg-MultiLine"
+                                    autocomplete="off"
+                                    name="MultiLine"
+                                    placeholder=""></textarea>
+                            </span>
+                        </div>
+                    </li>
 
-                            <li id="MultiLine-li">
-                                <label for="MultiLine-arialabel">
-                                    <span
-                                        >Donnez-moi des précisions sur votre besoin</span
-                                    >
-                                </label>
-                                <div>
-                                    <span>
-                                        <textarea
-                                            id="MultiLine-arialabel"
-                                            aria-describedby="hint-MultiLine countMsg-MultiLine"
-                                            autocomplete="off"
-                                            name="MultiLine"
-                                            placeholder=""></textarea>
-                                    </span>
-                                </div>
-                            </li>
+                    <li id="HtmlText-li">
+                        <label>Je reviens vers vous dans les prochains jours !</label
+                        >
+                    </li>
+                </ul>
 
-                            <li id="HtmlText-li">
-                                <label>Je reviens vers vous dans les prochains jours !</label
-                                >
-                            </li>
-                        </ul>
-                    </div>
-
-                    <ul>
-                        <li style="overflow:visible; position: relative;">
-                            <button value="submit">
-                                <em>Envoyer ma demande</em>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
+                <ul>
+                    <li style="overflow:visible; position: relative;">
+                        <button value="submit">
+                            <em>Envoyer ma demande</em>
+                        </button>
+                    </li>
+                </ul>
             </form>
         </main>
         <Footer />
@@ -211,5 +206,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
         width: 100%;
     }
     @media (max-width: 768px) {
+        form {
+            width: 100%;
+            padding: 5vw;
+        }
     }
 </style>

@@ -1,0 +1,34 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<!doctype html>
+<html lang="fr-fr">
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <meta http-equiv="refresh" content="5; url=/" />
+    <body>
+        <Header title={SITE_TITLE} />
+        <main>
+            <div>
+                Votre prise de contact a bien été reçue ! Je reviens vers vous très rapidement.
+            </div>
+        </main>
+        <Footer />
+    </body>
+</html>
+
+
+<style>
+    div {
+        background: var(--dark-gray);
+        margin: auto;
+        padding: 2vmax;
+        border-radius: 50px;
+        font-size: 2rem;
+    }
+    @media (max-width: 768px) {
+    }
+</style>
