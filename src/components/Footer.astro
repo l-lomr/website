@@ -3,12 +3,44 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} cassidoo. <a href="https://github.com/cassidoo/blahg">This blog is open source</a>! <3
+	<div id="botlogo"><a href="/"><img src="/LogoBLANC.png" alt="Logo LOMR Cybersécurité"></a></div>
+	<div id="botlinks">
+		<a href="/mentions-legales">Mentions légales</a>
+		<a href="/cgv">CGV</a>
+		<a href="https://www.linkedin.com/company/lomr-cyber/" target="_blank" rel="noopener noreferrer"><img src="/linkedin.png" alt="logo linkedin"> </a>
+	</div>
 </footer>
 <style>
+
+	#botlogo {
+		margin-right: auto;
+	}
+
+	#botlogo img{
+		max-height: 5vh;
+	}
+
+	#botlinks {
+		font-size: calc(10px + 1vw);
+		display: flex;
+    	gap: 2.5vw;
+	}
+
+	#botlinks a {
+		text-decoration: none;
+	}
+
+	#botlinks img {
+		max-height: 0.8em;
+	}
+	
 	footer {
-		padding: 25px;
-		text-align: center;
-		font-size: 0.8rem;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 4vw;
+		background-color: var(--dark-gray);
+		padding: 0px 2.5vw;
 	}
 </style>

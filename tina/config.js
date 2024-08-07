@@ -67,42 +67,53 @@ export default defineConfig({
 						required: true,
 					},
 					{
+						type: 'image',
+						label: 'Couverture',
+						name: 'cover',
+					},
+					{
+						label: "Alt couverture",
+						name: "altCover",
+						type: "string",
+						required: true,
+					},
+					{
 						label: "Tags",
 						name: "tags",
 						type: "string",
 						list: true,
 						options: [
 							{
-								value: "technical",
-								label: "Technical",
+								value: "actualite",
+								label: "Actualité",
 							},
 							{
-								value: "advice",
-								label: "Advice",
+								value: "crypto",
+								label: "Cryptographie",
 							},
 							{
-								value: "events",
-								label: "Events",
+								value: "auth",
+								label: "Authentification",
 							},
 							{
-								value: "learning",
-								label: "Learning",
+								value: "reseau",
+								label: "Réseau",
 							},
 							{
-								value: "meta",
-								label: "Meta",
+								value: "windows",
+								label: "Windows",
 							},
 							{
-								value: "work",
-								label: "Work",
+								value: "linux",
+								label: "Linux",
 							},
 							{
-								value: "personal",
-								label: "Personal",
+								value: "serveur",
+								label: "Serveur",
 							},
 							{
-								value: "musings",
-								label: "Musings",
+								value: "cloud",
+								label: "Cloud",
 							},
 						],
 					},
@@ -132,7 +143,7 @@ export default defineConfig({
 	search: {
 		tina: {
 			indexerToken: process.env.TINASEARCH,
-			stopwordLanguages: ["eng"],
+			stopwordLanguages: ["fra"],
 		},
 		indexBatchSize: 50,
 		maxSearchIndexFieldLength: 100,

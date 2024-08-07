@@ -1,21 +1,31 @@
 ---
-const { slug, title, tags, description, date } = Astro.props;
+const { slug, title, tags, description, date, cover } = Astro.props;
 ---
 
 <li class="post">
-	<a href={`/post/${slug}/`} class="title">{title}</a>
-	<time datetime={date}>
-		{
-			new Date(date).toLocaleDateString("en-us", {
-				year: "numeric",
-				month: "short",
-				day: "numeric",
-			})
-		}
-	</time>
-	<br />
-	{description && <span class="excerpt">{description}</span>}
 	<div>
+	<a href={`/post/${slug}/`} class="title">
+		<div class="top">
+			{ cover ? <img class="cover" src={`${cover}`}/> : <img class="cover" src="/assets/white.png"/>}
+		</div>
+		<div class="bottom">
+			<time datetime={date}>
+				{
+					new Date(date).toLocaleDateString("fr-fr", {
+						year: "numeric",
+						month: "numeric",
+						day: "numeric",
+					})
+				}
+			</time>
+			<br />
+			{title}
+
+			<br />
+			{description && <span class="excerpt">{description}</span>}
+		</div>
+	</a>
+	<div class="tags-container bottom">
 		{
 			tags &&
 				tags.map((tag) => (
@@ -25,4 +35,89 @@ const { slug, title, tags, description, date } = Astro.props;
 				))
 		}
 	</div>
+	</div>
 </li>
+
+<style>
+	li {		
+		background: var(--lomr-gradient-transparent);
+		border-radius: 55px;
+	}
+
+	li div {
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.title {		
+		font-size: 1.5rem;
+		font-weight: bold;
+		display: block;
+		text-wrap: wrap;
+	}
+
+	time {
+		font-size: 1rem;
+	}
+
+	.excerpt {
+		font-size: 1rem;
+		display: block;
+		overflow-wrap: break-word;
+	}
+
+	.top {
+		min-width: 1px;
+		height: 8vh;
+		border-top-left-radius: 50px;
+		border-top-right-radius: 50px;
+		overflow: hidden;
+	}
+
+	.top .cover {
+		width: 120%;
+		transform: translate(-10%, -10%);
+		height: 100%;		
+		border-top-left-radius: 49px;
+		border-top-right-radius: 49px;
+		object-fit: cover;
+		object-position: top;
+	}
+
+	.bottom {
+		padding: 0.5vw 2vw 5px 2vw;
+		
+	}
+
+	li div.tags-container {
+		padding-bottom: 1vh;
+		text-align: center;
+	}
+
+	.tag {
+		font-size: 1rem;
+		text-decoration: underline;
+		padding-right: 1vw;
+	}
+
+	@media (max-width: 768px) {
+		
+		.bottom {
+			padding: 0.5vw 5vw 5px 5vw;
+		}
+
+		.top {
+			height: 50vw;
+		}
+
+		li div.tags-container {
+			padding-bottom: 3vh;
+		}
+
+		li {
+			margin-bottom: 3vh;
+		}
+	}
+</style>

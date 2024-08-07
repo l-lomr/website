@@ -1,0 +1,90 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+---
+
+<!doctype html>
+<html lang="fr-fr">
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			
+			<div id="photo">
+				<img src="/photo.jpg" alt="Photo de Louis Moreau, dirigeant de LOMR">
+			</div>
+
+			<div id="text">
+				<h2>
+					Qui suis-je ?
+				</h2>
+				<p>Je m'appelle Louis Moreau, et je suis...</p>
+				<p>
+					<b>Docteur en Cybersécurité</b>
+					<br>
+					Diplômé en 2022 de l'Université de Limoges, <a href="https://theses.fr/2022LIMO0129" target="_blank" rel="noopener noreferrer">ma thèse</a> 
+					porte en particulier sur les réseaux d'objets connectés. Cette thèse, et le master en cybersécurité qui l'a précédée, m'ont permit d'acquérir un éventail de compétences
+					variées dans le domaine de la sécurité des systèmes d'information, tant sur les plans techniques que normatifs.
+					<br>
+					<br>
+					<b>Dirigeant de PME</b>
+					<br>
+					De 2016 à 2023, j'ai été directeur technique d'une entreprise innovante qui a compté jusqu'à 25 employés. C'est être en charge de la sécurité du sytème 
+					d'information de cette entreprise (serveurs, ordinateurs individuels, logiciels métier) et de ses produits (IoT, applications, SaaS) qui m'a fait réaliser le manque d'offre adaptée aux entreprises de cette taille.
+					<br>
+					<br>
+					<b>Enseignant</b>
+					<br>
+					J'enseigne tous les ans auprès d'élèves de masters ou d'ingénieurs en formation des matières telles que "Authentification et Cryptographie" ou encore "Politique de Sécurité".
+				</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		flex-wrap: wrap-reverse;
+	}
+
+	#text, 
+	#photo {
+		flex-grow: 1 1;
+		margin: 1vh 1.6vw;
+		padding: 2.5vmin;
+		border-radius : 50px;
+		width: 30%;
+		align-self: stretch;		
+	}
+
+	#text {		
+		background-color: var(--dark-gray);
+		padding: 3vw;
+	}
+
+	#photo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#photo img {
+		display: inline-block;
+		max-width: 100%;	
+		border-radius: 50px;
+		object-fit: contain;
+	}
+
+	@media (max-width: 768px) {
+	
+		#text, 
+		#photo {
+			width: 100%;
+		}	
+	}
+
+</style>

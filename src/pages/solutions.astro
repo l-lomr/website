@@ -1,0 +1,157 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import Button from "../components/Button.astro";
+
+---
+
+<!doctype html>
+<html lang="fr-fr">
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+					
+			<div id="solutions">
+				<div class="column">
+					<h2>Accompagnement initial</h2>
+					
+					<h4>Pour qui ?</h4>
+
+					<p>Les entreprises, associations, collectivités soucieuses de leur cybersécurité mais qui ne sont <em>pas encore passées à l'action</em></p>
+
+					<h4>Quoi ?</h4>
+
+					<p>Un accompagnement <em>court, simple et adapté</em>, afin de rapidement mettre en place les bases de la cybersécurité</p>
+
+					<h4>Comment ?</h4>
+
+					<p>En appliquant une ou plusieurs mesures parmi entre autres : </p>
+					<ul>
+						<li>Audit de cybersécurité initial gratuit <a href="https://www.monaidecyber.ssi.gouv.fr/" target="_blank" rel="noopener noreferrer">MonAideCyber</a></li>
+						<li>Évaluation des priorités de l'entreprise</li>
+						<li>Formation des dirigeants et/ou employés</li>
+						<li>Sécurisation des services critiques de l'entreprise (messagerie, sauvegarde, mots de passe et authentification,...)</li>
+						<li>Inventaires de base (SI, données,...)</li>
+						<li>Conformité (RGPD,...)</li>
+					</ul>
+
+					<div class="cta">
+						<a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a>
+					</div>
+				</div>
+				<div class="column">
+					<h2>Accompagnement intermédiaire</h2>
+
+					<h4>Pour qui ?</h4>
+
+					<p>Les entreprises pour qui les bases sont déjà en places, et cherchent à <em>passer au niveau supérieur</em></p>
+
+					<h4>Quoi ?</h4>
+
+					<p>Un accompagnement <em>focalisé</em> sur les manques en cybersécurité et les priorités de l'entreprise</p>
+
+					<h4>Comment ?</h4>
+
+					<p>En mettant en place des solutions plus avancées : </p>
+					<ul>
+						<li>Audit poussé sur un élément du SI de l'entreprise</li>
+						<li>Configuration et gestion d'outils de sécurité (pare-feu, antivirus,...)</li>
+						<li>Renforcement des méchanismes déjà en place</li>
+						<li>Assurance cyber</li>
+						<li>Gestion d'incidents</li>
+						<li>Suivi des mises à jour</li>
+					</ul>
+
+					<div class="cta">
+						<a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a>
+					</div>
+				</div>
+				<div class="column">
+					<h2>Accompagnement avancé</h2>
+
+					<h4>Pour qui ?</h4>
+
+					<p>Les entreprises qui ont identifié un <em>besoin en cybersécurité spécifique</em> et ont besoin d'un intervenant externe</p>
+
+					<h4>Quoi ?</h4>
+
+					<p>Un accompagnement en profondeur sur vos sujets les plus techniques</p>
+
+					<h4>Comment ?</h4>
+
+					<p>En appliquant des solutions dédiées : </p>
+					<ul>
+						<li>Prise en compte de spécificités liées au Cloud</li>
+						<li>Accompagnement sur le nomadisme</li>
+						<li>Accompagnement en vue d'une certification (ISO27001, NIS2, DORA, CRA, HDS,...)</li>
+					</ul>
+
+					<div class="cta">
+						<a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	
+	h2 {
+		width: 100%;
+		text-align: center;
+		margin: 0 0 1vh 0;
+		font-size: 1.8em;
+	}
+
+	h4 {
+		font-weight: bold;
+		font-size: 1.4em;
+		margin: 0;
+	}
+
+	em {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	main div {
+		width: 100%;
+		display: flex;
+		border-radius: 50px;
+		gap: 2vw;
+	}
+
+	#solutions div.column{
+		display: flex;
+		flex-direction: column;
+		gap: 2vh;
+		background: var(--lomr-gradient-transparent);
+		padding: 2.5vw;
+	}
+
+	.cta {
+		margin-top: auto;
+		justify-content: center;		
+	}
+
+	@media (max-width: 768px) {
+	
+		main div {
+			flex-wrap: wrap;
+		}	
+
+		#solutions div.column{
+			padding: 5vw;
+		}
+	}
+</style>

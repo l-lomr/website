@@ -2,42 +2,126 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import HomePosts from "../components/HomePosts.astro";
-import ColorScript from "../components/ColorScript.astro";
-import Tags from "../components/Tags.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import { Content as About } from "./about.md";
-import getTags from "../scripts/getTags";
 
-const posts = await Astro.glob("../posts/*.md");
-
-const tags = getTags(posts);
 ---
 
 <!doctype html>
-<html lang="en-us">
+<html lang="fr-fr">
 	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<About />
+			<div id="soustitre">
+				LOMR, le partenaire cybersécurité des TPE/PME
+			</div>
+			<div id="etapes-container">	
+				<div class="etape">
+					<h3>Étape 1 : Diagnostic initial gratuit</h3>
+					<p>
+						Je réalise avec vous un premier diagnostic gratuit d'1h30 environ,
+						<br>
+						<br>
+						Ce diagnostic permet d'identifier quelles sont les 6 priorités de votre entreprise en terme de sécurité des sytèmes d'information.
+						Ces priorités sont réalisables en 6 mois par vos équipes, vos prestataires, ou tout simplement par moi !
+						<br>
+						<br>
+						Note : ce diagnostic est réalisé avec le service <a href="https://www.monaidecyber.ssi.gouv.fr/" target="_blank" rel="noopener noreferrer">MonAideCyber</a> de l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information).
+					</p>
+				</div>
+				<div class="etape">
+					<h3>Étape 2 : Accompagnement sur-mesure</h3>
+					<p>
+						Sur la base du diagnostic initial, je vous accompagne dans la mise en place de mesures de sécurité.
+						<br>
+						<br>
+						Nous travaillons ensemble à appliquer les actions identifiées dans le diagnostic dans le respect de vos contraintes.
+						Si besoin, nous réalisons des diagnostics avancés sur des thématiques spécifiques à votre entreprise.
+						<br>
+						<br>
+						L'objectif principal est de protéger efficacement votre entreprise et de garantir au maximum la continuité de vos activtiés.
+						Les actions incluent notamment la formation de vos équipes, l'inventaire de votre système d'information, 
+						l'audit et la configuration de vos équipements et logiciels, la gestion des sauvegardes, la préparation et la gestion d'incident, l'audit de vos produits (SaaS, IoT, Apps), et bien d'autres.
+					</p>
+				</div>
+				<div class="etape">
+					<h3>Étape 3 : Suivi régulier</h3>
+					<p>
+						Passée la première étape d'accompagnement, j'assure à vos côté le suivi des actions mises en place selon vos besoins.
+						<br>
+						<br>
+						En effet, il est important d'avoir un suivi régulier de nombreux points, et si possible un système d'alerte adapté à votre système d'information.
 
-			<br />
-
-			<h3>Here's my most recent posts</h3>
-
-			<HomePosts allPosts={posts} />
-
-			<p class="center">
-				You can also <a href="https://blahg.netlify.app/rss.xml">
-					subscribe with RSS!
-				</a>
-			</p>
-			<br />
-
-			<Tags tags={tags} all />
+					</p>
+				</div>
+			</div>	
 		</main>
 		<Footer />
-		<ColorScript />
 	</body>
 </html>
+
+<style>
+	#soustitre {
+		width: 100%;
+		background: var(--lomr-gradient);
+		border-radius: 50px;
+		padding: 1vw;
+		margin: 0rem 1.6vw;
+		font-size: 3vw;
+		font-weight: bold;
+		text-align: center;
+		align-self: flex-start;
+	}
+
+	#etapes-container {
+		display: flex;
+		flex: 1 1;
+		flex-wrap: nowrap;
+		width: 100%;
+		margin-top: 0.5rem;
+	}
+
+	.etape {
+		flex-grow: 1;
+		background-color: var(--dark-gray);
+		margin: 1.6vw;
+		padding: 2.5vw;
+		border-radius : 50px;
+		width: 33%;
+	}
+
+	.etape:hover {
+		background: var(--lomr-gradient-transparent);
+	}
+
+	.etape h3 {
+		font-size: 1.6rem;		
+		font-weight: bold;
+		margin: 0;
+	}
+
+	.etape p {
+		font-size: 1rem;
+	}
+
+	@media (max-width: 768px) {
+
+		#soustitre {
+			padding: 0.5rem;
+			font-size: 2.5rem;
+		}
+
+		#etapes-container {
+			flex-wrap: wrap;
+		}
+
+		.etape {
+			flex-grow: 1;
+			background-color: var(--dark-gray);			
+			padding: 5vw;
+			margin: 1rem 1.6vw;
+			width: 100%
+		}
+	}
+	
+</style>
