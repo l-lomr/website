@@ -125,7 +125,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
                 <ul>
                     <li style="overflow:visible; position: relative;">
-                        <button value="submit">
+                        <button class="submit" value="submit">
                             <em>Envoyer ma demande</em>
                         </button>
                     </li>
@@ -136,6 +136,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     </body>
 </html>
 
+<script>    
+    const buttons = document.querySelectorAll('button.submit');
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            
+            const reset_invalids = document.querySelectorAll('.invalid');
+            reset_invalids.forEach((invalid) => {
+                invalid.classList.remove("invalid");
+            });
+
+            const invalids = document.querySelectorAll('input:invalid');
+
+            invalids.forEach((invalid) => {
+                invalid.classList.add("invalid");
+            });
+        });
+    });
+
+</script>
 
 <style>
     ul {
@@ -194,7 +213,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
         padding: 10px;
     }
 
-    input:invalid {
+    .invalid {
         background: pink;
     }
 
