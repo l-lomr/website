@@ -2,7 +2,7 @@
 title: Conditions générales de vente
 ---
 
-_Dernière modification : 12/07/2024_
+_Dernière modification : 19/08/2024_
 
 # Conditions générales de vente
 
