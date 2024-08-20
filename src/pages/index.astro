@@ -25,9 +25,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 						Ce diagnostic permet d'identifier quelles sont les 6 priorités de votre entreprise en terme de sécurité des sytèmes d'information.
 						Ces priorités sont réalisables en 6 mois par vos équipes, vos prestataires, ou tout simplement par moi !
 						<br>
-						<br>
+                        <br>
 						Note : ce diagnostic est réalisé avec le service <a href="https://www.monaidecyber.ssi.gouv.fr/" target="_blank" rel="noopener noreferrer">MonAideCyber</a> de l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information).
 					</p>
+                    <img class="square-image" src="/ILLU5.png" alt="Logo LOMR Cybersécurité">
 				</div>
 				<div class="etape">
 					<h3>Étape 2 : Accompagnement sur-mesure</h3>
@@ -36,13 +37,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 						<br>
 						<br>
 						Nous travaillons ensemble à appliquer les actions identifiées dans le diagnostic dans le respect de vos contraintes.
-						Si besoin, nous réalisons des diagnostics avancés sur des thématiques spécifiques à votre entreprise.
 						<br>
 						<br>
-						L'objectif principal est de protéger efficacement votre entreprise et de garantir au maximum la continuité de vos activtiés.
-						Les actions incluent notamment la formation de vos équipes, l'inventaire de votre système d'information, 
-						l'audit et la configuration de vos équipements et logiciels, la gestion des sauvegardes, la préparation et la gestion d'incident, l'audit de vos produits (SaaS, IoT, Apps), et bien d'autres.
+						L'objectif principal est de protéger efficacement votre entreprise et de garantir au maximum la continuité de vos activités.
+						Les actions incluent notamment la formation de vos équipes, la sécurité de votre système d'information (données, équipements, logiciels), la gestion d'incident, l'audit de vos produits (SaaS, IoT, Apps), et bien d'autres.
 					</p>
+                    <img class="square-image"  src="/ILLU2.png" alt="Logo LOMR Cybersécurité">
 				</div>
 				<div class="etape">
 					<h3>Étape 3 : Suivi régulier</h3>
@@ -53,6 +53,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 						En effet, il est important d'avoir un suivi régulier de nombreux points, et si possible un système d'alerte adapté à votre système d'information.
 
 					</p>
+                    <img src="/ILLU1.png" alt="Logo LOMR Cybersécurité">
 				</div>
 			</div>	
 		</main>
@@ -62,12 +63,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 <style>
 	#soustitre {
-		width: 100%;
+		width: 80%;
 		background: var(--lomr-gradient);
 		border-radius: 50px;
-		padding: 1vw;
+		padding: 0.5vw;
 		margin: 0rem 1.6vw;
-		font-size: 3vw;
+		font-size: 2.5vw;
 		font-weight: bold;
 		text-align: center;
 		align-self: flex-start;
@@ -78,14 +79,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 		flex: 1 1;
 		flex-wrap: nowrap;
 		width: 100%;
-		margin-top: 0.5rem;
+		margin-top: 0.3rem;
 	}
 
 	.etape {
+        display: flex;
 		flex-grow: 1;
+        flex-direction: column;
 		background-color: var(--dark-gray);
-		margin: 1.6vw;
-		padding: 2.5vw;
+		margin: 1.3vw;
+		padding: 1.5vw;
 		border-radius : 50px;
 		width: 33%;
 	}
@@ -101,8 +104,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	}
 
 	.etape p {
+        flex-grow: 1;
 		font-size: 1rem;
 	}
+
+    .etape img {
+        align-self: center;
+        max-width: 80%;
+    }
+
+    .etape img.square-image {
+        max-width: 60%;
+    }
 
 	@media (max-width: 768px) {
 
