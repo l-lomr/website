@@ -38,9 +38,7 @@ import Button from "../components/Button.astro";
 						<li>Conformité (RGPD,...)</li>
 					</ul>
 
-					<div class="cta">
-						<a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a>
-					</div>
+					
 				</div>
 				<div class="column">
 					<h2>Accompagnement intermédiaire</h2>
@@ -65,9 +63,7 @@ import Button from "../components/Button.astro";
 						<li>Suivi des mises à jour</li>
 					</ul>
 
-					<div class="cta">
-						<a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a>
-					</div>
+					<img src="/ILLU3.png" alt="un homme et une femme travaillent à la sécurité d'un système d'information">
 				</div>
 				<div class="column">
 					<h2>Accompagnement avancé</h2>
@@ -89,9 +85,7 @@ import Button from "../components/Button.astro";
 						<li>Accompagnement en vue d'une certification (ISO27001, NIS2, DORA, CRA, HDS,...)</li>
 					</ul>
 
-					<div class="cta">
-						<a href="mailto:contact@lomr.fr" target="_blank"><Button text="CONTACT"/></a>
-					</div>
+					
 				</div>
 			</div>
 
@@ -105,7 +99,7 @@ import Button from "../components/Button.astro";
 	h2 {
 		width: 100%;
 		text-align: center;
-		margin: 0 0 1vh 0;
+		margin: 0 0 0.5vh 0;
 		font-size: 1.8em;
 	}
 
@@ -134,10 +128,15 @@ import Button from "../components/Button.astro";
 	#solutions div.column{
 		display: flex;
 		flex-direction: column;
-		gap: 2vh;
+		gap: 1vh;
 		background: var(--lomr-gradient-transparent);
-		padding: 2.5vw;
+		padding: 1.5vw;
 	}
+
+    #solutions div.column img {
+        align-self: center;
+        max-width: 80%;
+    }
 
 	.cta {
 		margin-top: auto;
