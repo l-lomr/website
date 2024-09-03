@@ -5,12 +5,13 @@ slug: pourquoi-coffre-fort-mot-de-passe
 description: '-'
 cover: /assets/public/assets/PUBLI11-2.jpg
 altCover: texte pourquoi utiliser un coffre-fort de mot de passe
-tags: []
-added: 2024-09-03T13:23:35.683Z
+tags:
+  - crypto
+  - auth
+added: 2024-08-07T22:00:00.000Z
 ---
 
 Pourquoi utiliser un coffre-fort de mots de passe ? 🔒
-
 
 Les mots de passe sont le moyen de connexion le plus courant, mais présentent de nombreux défauts :
 
@@ -20,7 +21,6 @@ Les mots de passe sont le moyen de connexion le plus courant, mais présentent d
 
 🥇 Votre mot de passe doit être utilisé une seule fois. Ainsi, en cas de fuite de données, seul le compte associé à ce mot de passe est compromis.
 Or, l’utilisateur moyen utilise 255 mots de passe différents (168 personnels, 87 professionnels - source Nordpass 2024). Pour cette raison, les mots de passe sont souvent réutilisés ou trop simples.
-
 
 💡C’est là qu’un gestionnaire de mot de passe est utile : il se charge de générer pour vous des mots de passe sécuriser et de les retenir, et permet de les saisir automatiquement au moment de l’authentification. Vous n’avez plus qu’un seul mot de passe (robuste) à retenir : celui du gestionnaire !
 Certains gestionnaires proposent même une sauvegarde dans le cloud automatique permettant de partager ses mots de passes sur plusieurs appareils.
